@@ -1,0 +1,6 @@
+name: check_minecraft_server_health
+on: push
+
+jobs:
+        container:
+                name:
