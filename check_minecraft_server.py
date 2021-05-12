@@ -1,7 +1,7 @@
 from mcstatus import MinecraftServer
 import os
 
-if 'MCS_IP_ADDRESS' not in os.environ.keys():
+if 'MCS_IP' not in os.environ.keys():
     print("Couldn't fetch server's IP address, please provde it before the port")
     exit()
 
@@ -9,7 +9,7 @@ if 'MCS_PORT' not in os.environ.keys():
     print("Couldn't fetch server's port, please provide it after the IP address")
     exit()
 
-server = MinecraftServer(os.environ['MCS_IP_ADDRESS'], int(os.environ['MCS_PORT']))
+server = MinecraftServer(os.environ['MCS_IP'], int(os.environ['MCS_PORT']))
 
 try:
     status = server.status() 
